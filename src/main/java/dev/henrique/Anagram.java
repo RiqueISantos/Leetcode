@@ -1,7 +1,5 @@
 package dev.henrique;
 
-import java.util.Arrays;
-
 public class Anagram {
     public static void main(String[] args) {
         System.out.println(isAnagram("rat", "car"));
