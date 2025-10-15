@@ -189,6 +189,46 @@ public void printTree(TreeNode root) {
 
 ---
 
+### 6️⃣ Climbing Stairs
+**Link:** [LeetCode - Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+
+**Descrição:**
+Você está subindo uma escada com `n` degraus.  
+Cada vez, você pode subir **1 ou 2 degraus**.  
+De quantas maneiras diferentes você pode chegar ao topo?
+
+**Exemplo:**
+```text
+Entrada: n = 4  
+Saída: 5  
+Explicação: As formas são [1+1+1+1], [1+1+2], [1+2+1], [2+1+1], [2+2]
+```
+
+**Solução em Java:**
+```java
+public class ClimbingStairs {
+    public static void main(String[] args) {
+        System.out.println(climbStairs(4));
+    }
+
+    public static int climbStairs(int n) {
+        int prev = 1, curr = 1;
+        for (int i = 2; i <= n; i++) {
+            int temp = curr;
+            curr = prev + curr;
+            prev = temp;
+        }
+        return curr;
+    }
+}
+```
+
+**🧮 Análise de Complexidade:**
+- **Tempo:** O(n)  
+- **Espaço:** O(1)
+
+---
+
 ## 🧾 Autor
 
 Feito com por **Henrique Santos**  
