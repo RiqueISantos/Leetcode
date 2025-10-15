@@ -130,13 +130,6 @@ public boolean isAnagram(String s, String t) {
 
 ---
 
-## 🚀 Próximos Passos
-- [ ] Adicionar novos desafios semanalmente  
-- [ ] Criar testes unitários com JUnit  
-- [ ] Adicionar explicações visuais (diagramas ou exemplos passo a passo)
-
----
-
 ## 🧾 Autor
 
 Feito com por **Henrique Santos**  
