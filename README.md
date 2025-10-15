@@ -56,9 +56,7 @@ public int[] twoSum(int[] nums, int target) {
 
 **🧮 Análise de Complexidade:**
 - **Tempo:** O(n)  
-  O loop percorre o array uma única vez, e as operações de busca no `HashMap` ocorrem em tempo constante O(1).
-- **Espaço:** O(n)  
-  O mapa armazena no máximo `n` elementos (um para cada número do array).
+- **Espaço:** O(n)
 
 ---
 
@@ -90,9 +88,7 @@ public void reverseString(char[] s) {
 
 **🧮 Análise de Complexidade:**
 - **Tempo:** O(n)  
-  Cada caractere é visitado no máximo uma vez durante a troca.
-- **Espaço:** O(1)  
-  Não há criação de novas estruturas — apenas variáveis temporárias.
+- **Espaço:** O(1)
 
 ---
 
@@ -124,9 +120,72 @@ public boolean isAnagram(String s, String t) {
 
 **🧮 Análise de Complexidade:**
 - **Tempo:** O(n)  
-  Cada string é percorrida uma vez, e todas as operações no array são O(1).
-- **Espaço:** O(1)  
-  O array `count` tem tamanho fixo (26 letras), logo o espaço não depende da entrada.
+- **Espaço:** O(1)
+
+---
+
+### 4️⃣ Same Tree
+**Link:** [LeetCode - Same Tree](https://leetcode.com/problems/same-tree/)
+
+**Descrição:**
+Verifique se duas árvores binárias são **estruturalmente idênticas** e possuem os mesmos valores em todos os nós.
+
+**Exemplo:**
+```text
+Entrada: p = [1,2,3], q = [1,2,3]  
+Saída: true
+```
+
+**Solução em Java:**
+```java
+public boolean isSameTree(TreeNode p, TreeNode q) {
+    if (p == null && q == null) return true;
+    if (p == null || q == null || p.val != q.val) return false;
+    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+}
+```
+
+**🧮 Análise de Complexidade:**
+- **Tempo:** O(n)  
+- **Espaço:** O(h) (recursão na altura da árvore)
+
+---
+
+### 5️⃣ Invert Binary Tree
+**Link:** [LeetCode - Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+
+**Descrição:**
+Inverta uma árvore binária, trocando todos os filhos esquerdo e direito de cada nó.
+
+**Exemplo:**
+```text
+Entrada: root = [4,2,7,1,3,6,9]  
+Saída: [4,7,2,9,6,3,1]
+```
+
+**Solução em Java:**
+```java
+public TreeNode invertTree(TreeNode root) {
+    if (root == null) return null;
+    TreeNode temp = root.left;
+    root.left = root.right;
+    root.right = temp;
+    invertTree(root.left);
+    invertTree(root.right);
+    return root;
+}
+
+public void printTree(TreeNode root) {
+    if (root == null) return;
+    System.out.print(root.val + " ");
+    printTree(root.left);
+    printTree(root.right);
+}
+```
+
+**🧮 Análise de Complexidade:**
+- **Tempo:** O(n)  
+- **Espaço:** O(h) (recursão na altura da árvore)
 
 ---
 
@@ -135,3 +194,4 @@ public boolean isAnagram(String s, String t) {
 Feito com por **Henrique Santos**  
 🎓 Estudante de **Bacharelado em Sistemas da Informação**  
 📘 Apaixonado por algoritmos, Java e boas práticas de código.
+
