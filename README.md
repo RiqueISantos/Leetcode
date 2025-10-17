@@ -231,7 +231,7 @@ public class ClimbingStairs {
 
 ## 🧾 Autor
 
-Feito com por **Henrique Santos**  
+Feito por **Henrique Santos**  
 🎓 Estudante de **Bacharelado em Sistemas da Informação**  
 📘 Apaixonado por algoritmos, Java e boas práticas de código.
 
